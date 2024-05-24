@@ -1,0 +1,24 @@
+# Activer Redis sans persistance
+redis:
+  enabled: true
+  master:
+    persistence:
+      enabled: false
+  replica:
+    persistence:
+      enabled: false
+# Désactiver la base de données externe
+externalDatabase:
+  enabled: false
+# Activer SQLite comme base de données interne
+internalDatabase:
+  enabled: true
+  name: nextcloud
+# Configurer la persistance (désactivée)
+persistence:
+  enabled: false
+# Configurer le service pour exposer Nextcloud
+service:
+  type: ClusterIP
+  port: 8080
+
